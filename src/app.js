@@ -1,12 +1,12 @@
 import mongoose from 'mongoose';
 import { GraphQLServer } from 'graphql-yoga'
 
-import graphqlConfig from './schema';
+import graphqlConfig from './api';
 
 const PORT = 3005;
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/news');
+mongoose.connect('mongodb://localhost/sport_news');
 
 const options  = {
     tracing :true,
