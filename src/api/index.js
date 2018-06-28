@@ -1,13 +1,15 @@
 import news from './news';
 import auth from './auth';
+import { merge } from 'lodash';
 
 export default {
-    resolvers: Object.assign({}, news.resolvers, auth.resolvers),
+    resolvers: merge({}, news.resolvers, auth.resolvers),
     typeDefs: [news.typeDefs, auth.typeDefs].join(' '),
-    context: {
+    context: req => ({
+        ...req,
         models: {
             news: news.model,
             user: auth.model
         }
-    } 
+    })
 }
