@@ -19,7 +19,10 @@ async function requireAuth(resolver, parent, args, ctx, info) {
 }
 
 export const authMiddleware = {
-  Mutation: {
-    createNews: requireAuth
-  }
+    Query: {
+        allNews: requireAuth
+    },
+    Mutation: {
+        createNews: requireAuth
+    }
 };
