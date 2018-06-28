@@ -4,4 +4,6 @@ clone repo : `git clone https://github.com/alfarioekaputra/nodejs-graphql-mongod
 
 install package : `yarn / npm install`
 
-running : `http://localhost:3005/docs`
+running : `yarn / npm start`
+
+open browser : `http://localhost:3005/docs`
